@@ -7,28 +7,26 @@ import { Button } from '@/components/ui';
 const Navbar: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <>
-      <Box background={useColorModeValue('white', 'dark.30')}>
-        <Container maxWidth='container.lg'>
-          <Flex height={16} alignItems={'center'} justifyContent={'space-between'}>
-            <NextLink href='/'>
-              <Link cursor='default'>@hafidzamr_</Link>
-            </NextLink>
+    <Box background={useColorModeValue('white', 'dark.30')}>
+      <Container maxWidth='container.lg'>
+        <Flex height={16} alignItems='center' justifyContent='space-between'>
+          <NextLink href='/'>
+            <Link cursor='default'>@hafidzamr_</Link>
+          </NextLink>
 
-            <Flex alignItems={'center'}>
-              <Stack direction={'row'} spacing={7} alignItems='center'>
-                <NextLink href='/blog'>
-                  <Link cursor='default'>Article</Link>
-                </NextLink>
-                <Button cursor='default' onClick={toggleColorMode}>
-                  {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-                </Button>
-              </Stack>
-            </Flex>
+          <Flex alignItems='center'>
+            <Stack direction='row' spacing={7} alignItems='center'>
+              <NextLink href='/blog'>
+                <Link cursor='default'>Article</Link>
+              </NextLink>
+              <Button cursor='default' onClick={toggleColorMode}>
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              </Button>
+            </Stack>
           </Flex>
-        </Container>
-      </Box>
-    </>
+        </Flex>
+      </Container>
+    </Box>
   );
 };
 

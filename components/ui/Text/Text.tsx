@@ -8,13 +8,11 @@ export interface TextProps extends TextChakraProps {
 }
 
 const Text: React.FC<TextProps> = forwardRef<TextProps, 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span'>(
-  ({ lightColor, darkColor, children, ...rest }, ref) => {
-    return (
-      <TextChakra ref={ref} _dark={{ color: darkColor }} _light={{ color: lightColor }} {...rest}>
-        {children}
-      </TextChakra>
-    );
-  },
+  ({ lightColor, darkColor, children, ...rest }, ref) => (
+    <TextChakra ref={ref} _dark={{ color: darkColor }} _light={{ color: lightColor }} {...rest}>
+      {children}
+    </TextChakra>
+  ),
 );
 
 export default Text;

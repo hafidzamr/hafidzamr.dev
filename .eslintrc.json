@@ -33,12 +33,26 @@
   "rules": {
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-props-no-spreading": "off",
+    "react/no-unescaped-entities": 0,
     "react/jsx-filename-extension": [2, { "extensions": [".jsx", ".tsx"] }],
     "react/react-in-jsx-scope": "off",
-    "linebreak-style": "off",
-    "prettier/prettier": "error",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-indent": [2, 2],
+    // Other Config
     "jsx-a11y/anchor-is-valid": "off",
+    "prettier/prettier": "error",
+    "jsx-quotes": [2, "prefer-single"],
+    "linebreak-style": "off",
     "import/prefer-default-export": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "max-len": ["error", { "code": 140, "ignoreUrls": true }],
+    "object-curly-newline": "off"
   }
 }

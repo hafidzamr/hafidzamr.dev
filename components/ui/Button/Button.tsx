@@ -3,12 +3,10 @@ import { Button as ButtonChakra, ButtonProps as ButtonChakraProps, forwardRef } 
 
 export interface ButtonProps extends ButtonChakraProps {}
 
-const Button: React.FC<ButtonProps> = forwardRef<ButtonProps, 'button'>(({ children, ...rest }, ref) => {
-  return (
-    <ButtonChakra ref={ref} {...rest}>
-      {children}
-    </ButtonChakra>
-  );
-});
+const Button: React.FC<ButtonProps> = forwardRef<ButtonProps, 'button'>(({ children, ...rest }, ref) => (
+  <ButtonChakra ref={ref} {...rest}>
+    {children}
+  </ButtonChakra>
+));
 
 export default Button;

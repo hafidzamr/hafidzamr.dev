@@ -5,14 +5,12 @@ import { theme } from '@/theme.config';
 
 import { store } from '@/store';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <Provider store={store}>
-      <ChakraProvider resetCSS theme={theme}>
-        <Component {...pageProps} />
-      </ChakraProvider>
-    </Provider>
-  );
-}
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <Provider store={store}>
+    <ChakraProvider resetCSS theme={theme}>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  </Provider>
+);
 
 export default MyApp;
