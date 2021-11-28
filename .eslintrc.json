@@ -1,13 +1,15 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
   "parser": "@typescript-eslint/parser",
   "extends": [
     "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
+    "plugin:jest/recommended",
     "airbnb",
     "airbnb-typescript",
     "airbnb/hooks"
@@ -28,7 +30,14 @@
       "typescript": {}
     }
   },
-  "plugins": ["react", "@typescript-eslint", "import", "prettier"],
+  "plugins": ["react", "testing-library", "jest", "@typescript-eslint", "import", "prettier"],
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
   "ignorePatterns": [".eslintrc.js"],
   "rules": {
     "react-hooks/exhaustive-deps": "warn",

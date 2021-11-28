@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.setup.js", "__mocks__/styleMock.js", "__mocks__/fileMock.js", "jest.config.js"],
   "exclude": ["node_modules"]
 }
