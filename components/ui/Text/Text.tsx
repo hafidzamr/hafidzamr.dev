@@ -2,7 +2,7 @@ import React from 'react';
 import { Text as TextChakra, TextProps as TextChakraProps, forwardRef } from '@chakra-ui/react';
 import { ThemeTypings } from '@chakra-ui/styled-system';
 
-export interface TextProps extends TextChakraProps {
+export interface TextProps extends Omit<TextChakraProps, '_dark' | '_light'> {
   lightColor?: ThemeTypings['colors'];
   darkColor?: ThemeTypings['colors'];
 }
