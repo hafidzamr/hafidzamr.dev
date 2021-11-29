@@ -4,9 +4,9 @@ import Text from './Text';
 
 describe('Text Component', () => {
   test('Should be render Text Element', () => {
-    render(<Text>Hello World</Text>);
-    const textComponent = screen.getByText('Hello World');
-    expect(textComponent).toBeInTheDocument();
+    render(<Text data-testid='textComponent'>Hello World</Text>);
+    const textComponent = screen.getByTestId('textComponent');
+    expect(textComponent.textContent).toBe('Hello World');
   });
 
   test('Tag Should be H1', () => {
