@@ -62,6 +62,11 @@
     "import/prefer-default-export": "off",
     "no-param-reassign": "off",
     "max-len": ["error", { "code": 140, "ignoreUrls": true }],
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    // Testing Lib Config
+    "testing-library/await-async-query": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debugging-utils": "warn",
+    "testing-library/no-dom-import": "off"
   }
 }
