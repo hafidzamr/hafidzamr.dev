@@ -9,14 +9,16 @@ describe('Button Component', () => {
     expect(ButtonComponent.textContent).toBe('Click');
   });
 
-  // test('Button Clicked', () => {
-  //   render(
-  //     <Button data-testid='buttonComponent' onClick={jest.fn()}>
-  //       Click
-  //     </Button>,
-  //   );
-  //   const ButtonComponent = screen.getByTestId('buttonComponent');
-  //   fireEvent.click(ButtonComponent);
-  //   expect(ButtonComponent).toHaveBeenCalled();
-  // });
+  test('Button Clicked', () => {
+    const handleClick = jest.fn();
+
+    render(
+      <Button data-testid='buttonComponent' onClick={handleClick}>
+        Click
+      </Button>,
+    );
+    const ButtonComponent = screen.getByTestId('buttonComponent');
+    fireEvent.click(ButtonComponent);
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
 });
