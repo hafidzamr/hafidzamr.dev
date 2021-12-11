@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
 
           <Flex alignItems='center'>
             <Stack direction='row' spacing={7} alignItems='center'>
-              <NextLink href='/blog'>
-                <Link cursor='default'>Article</Link>
+              <NextLink href='/articles'>
+                <Link cursor='default'>Articles</Link>
               </NextLink>
               <Button cursor='default' onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}

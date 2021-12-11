@@ -9,7 +9,7 @@ const Layout: React.FC = ({ children }) => (
       <title>@hafidzamr_</title>
     </Head>
     <Navbar />
-    <Container maxWidth='container.lg' marginTop={150}>
+    <Container maxWidth='container.lg' marginTop={[50, 150]}>
       {children}
     </Container>
   </>
