@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Text from './Text';
+import { Text } from '@/components/ui';
 
 describe('Text Component', () => {
   test('Should be render Text Element', () => {
