@@ -1,10 +1,7 @@
 import { extendTheme, ThemeConfig } from '@chakra-ui/react';
 import { Styles, mode } from '@chakra-ui/theme-tools';
 
-// Foundation
-import foundations from './theme/foundations';
-
-// Components
+import foundations from '@/theme/foundations';
 import components from '@/theme/components';
 
 const styles: Styles = {

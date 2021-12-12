@@ -10,13 +10,13 @@ const Navbar: React.FC = () => {
     <Box background={useColorModeValue('white', 'dark.30')}>
       <Container maxWidth='container.lg'>
         <Flex height={16} alignItems='center' justifyContent='space-between'>
-          <NextLink href='/'>
+          <NextLink href='/' passHref>
             <Link cursor='default'>@hafidzamr_</Link>
           </NextLink>
 
           <Flex alignItems='center'>
             <Stack direction='row' spacing={7} alignItems='center'>
-              <NextLink href='/articles'>
+              <NextLink href='/articles' passHref>
                 <Link cursor='default'>Articles</Link>
               </NextLink>
               <Button cursor='default' onClick={toggleColorMode}>
