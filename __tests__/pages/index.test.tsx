@@ -12,15 +12,13 @@ describe('Home Pages', () => {
   test('Should be render introduce', () => {
     render(<Home />);
     const getTextIntro = screen.getByTestId('textIntro');
-    expect(getTextIntro).toHaveTextContent(/I'm Hafidz, software engineer - frontend/i);
+    expect(getTextIntro).toHaveTextContent(/I'm Hafidz, Software engineer - Frontend/i);
   });
 
   test('Should be render self describe', () => {
     render(<Home />);
     const getTextIntro = screen.getByTestId('textDescribe');
-    expect(getTextIntro).toHaveTextContent(
-      /Im Software Engineer - Frontend 🚀 from Indonesia. Always working on some project or learning something new!/i,
-    );
+    expect(getTextIntro).toHaveTextContent(/Im Software Engineer - Frontend 🚀 from Indonesia. Always learning something new!/i);
   });
 
   test('Should be render tech stacks', () => {

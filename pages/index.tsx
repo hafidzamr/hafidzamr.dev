@@ -14,7 +14,7 @@ const Home: NextPage = () => (
 
     <Box marginTop={50}>
       <Text data-testid='textDescribe' fontSize={15} marginBottom={3}>
-        Im Software Engineer - Frontend 🚀 from Indonesia. Always working on some project or learning something new!
+        Im Software Engineer - Frontend 🚀 from Indonesia. Always learning something new!
       </Text>
       <Text data-testid='textTechStacks' fontSize={15}>
         Stacks I have worked with:{' '}
@@ -82,7 +82,7 @@ const Home: NextPage = () => (
             TypeScript
           </Link>
         </ListItem>
-        <ListItem fontSize={15}>🎿 Hobbies other than coding : Playing games</ListItem>
+        <ListItem fontSize={15}>🎿 Hobbies other than coding : Playing Games</ListItem>
         <ListItem fontSize={15}>
           📫 How to reach me: <Link href='mailto:hafidzdev@gmail.com'>hafidzdev@gmail.com</Link>
         </ListItem>
