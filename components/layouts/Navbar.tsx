@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
               <NextLink href='/articles' passHref>
                 <Link cursor='default'>Articles</Link>
               </NextLink>
-              <Button cursor='default' onClick={toggleColorMode}>
+              <Button name='btnMode' cursor='default' onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
             </Stack>
