@@ -9,7 +9,7 @@ const Home: NextPage = () => (
       Hi there,
     </Text>
     <Text data-testid='textIntro' cursor='default' as='h2' fontSize={[20, 25]} fontWeight='bold' darkColor='glow.20'>
-      I'm Hafidz, Software engineer - Frontend
+      I'm Hafidz, Software Engineer - Frontend
     </Text>
 
     <Box marginTop={50}>
