@@ -15,7 +15,7 @@ const styles: Styles = {
 
 const config: ThemeConfig = {
   // useSystemColorMode: true, //true | false,
-  initialColorMode: 'system', // ligth || black || system,
+  initialColorMode: 'dark', // ligth || dark || system,
   cssVarPrefix: 'ui',
 };
 
