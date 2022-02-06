@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { Box, Link, UnorderedList, ListItem } from '@chakra-ui/react';
-import Layout from '@/components/layouts';
-import { Text } from '@/components/ui';
+import Layout from '@/Layouts';
+import { Text } from '@/components/UI';
 
 const Home: NextPage = () => (
   <Layout>
@@ -28,7 +28,7 @@ const Home: NextPage = () => (
         >
           React
         </Link>
-        ,{' '}
+        {', '}
         <Link
           href='https://nextjs.org/'
           textDecoration='underline'
@@ -39,7 +39,7 @@ const Home: NextPage = () => (
         >
           Next JS
         </Link>
-        ,{' '}
+        {', '}
         <Link
           href='https://nuxtjs.org/'
           textDecoration='underline'
@@ -71,7 +71,7 @@ const Home: NextPage = () => (
           >
             React
           </Link>
-          ,{' '}
+          {', '}
           <Link
             href='https://www.typescriptlang.org/'
             textDecoration='underline'
@@ -104,7 +104,7 @@ const Home: NextPage = () => (
       >
         Instagram
       </Link>
-      ,{' '}
+      {', '}
       <Link
         href='https://www.linkedin.com/in/hafidzamr/'
         fontSize={15}
@@ -116,7 +116,7 @@ const Home: NextPage = () => (
       >
         Linkedin
       </Link>
-      ,{' '}
+      {', '}
       <Link
         href='https://github.com/hafidzamr'
         fontSize={15}
@@ -126,8 +126,8 @@ const Home: NextPage = () => (
         rel='noopener noreferrer'
       >
         Github
-      </Link>{' '}
-      or{' '}
+      </Link>
+      {' or '}
       <Link
         href='https://drive.google.com/drive/folders/1AO9uKJxLXjvu3TpuiT5-dh5qinGEMbVg?usp=sharing'
         fontSize={15}

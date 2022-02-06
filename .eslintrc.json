@@ -54,6 +54,7 @@
     ],
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-indent": [2, 2],
+    "react/prop-types": 0,
     // Other Config
     "jsx-a11y/anchor-is-valid": "off",
     "prettier/prettier": "error",
@@ -63,6 +64,7 @@
     "no-param-reassign": "off",
     "max-len": ["error", { "code": 140, "ignoreUrls": true }],
     "object-curly-newline": "off",
+    "no-underscore-dangle": ["error", { "allow": ["_raw", "_id"] }],
     // Testing Lib Config
     "testing-library/await-async-query": "error",
     "testing-library/no-await-sync-query": "error",
