@@ -1,8 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import NextLink from 'next/link';
 import { Box, Text, Link, useColorModeValue } from '@chakra-ui/react';
 import Layout from '@/Layouts';
-import { allBlogs } from '@/.contentlayer/data';
-import { Blog as BlogProps } from '@/.contentlayer/types';
+import { allBlogs } from '.contentlayer/data';
+import { Blog as BlogProps } from '.contentlayer/types';
 
 const Article = (): JSX.Element => {
   const textColor = useColorModeValue('gray.900', 'glow.20');
