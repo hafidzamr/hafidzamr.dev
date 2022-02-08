@@ -6,6 +6,8 @@ import OrderedList from './OrderList';
 import Pre from './Pre';
 import Code from './Code';
 import Paragraph from './Paragraph';
+import H2 from './H2';
+import Blockquote from './Blockquote';
 
 const MDXComponent = {
   a: Link,
@@ -16,6 +18,8 @@ const MDXComponent = {
   p: Paragraph,
   pre: Pre,
   code: Code,
+  h2: H2,
+  blockquote: Blockquote,
 };
 
 export default MDXComponent;

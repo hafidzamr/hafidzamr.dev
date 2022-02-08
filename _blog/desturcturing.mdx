@@ -1,0 +1,166 @@
+---
+createdAt: '2022-02-06'
+title: 'Destructuring'
+summary: 'JavaScript versi 2015 atau banyak orang menyebutnya EchmaScript 6 (ES6) terdapat fitur yang menarik, yaitu Destructuring'
+tags: ['JavaScript', 'ES 2015']
+---
+
+Seorang _Frontend Engineer_ tentu tidak asing dengan yang namanya _Array_ dan _Object_. <br/>
+Di JavaScript versi 2015 atau banyak orang menyebutnya _EchmaScript 6 (ES6)_ terdapat fitur yang menarik, yaitu _Destructuring_,
+pada artikel ini saya akan membahas tentang _Destructuring_ pada _Array_ dan _Object_.
+
+> _The Destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)_
+
+## _Destructuring_ pada _Array_
+
+Mendapakan nilai dari _array_ yang memiliki lebih dari satu element mungkin memerlukan beberapa baris code.
+tapi dengan ada nya fitur _Destructuring_ dari _EchmaScript 6_ (ES 2015) maka kita akan mendapatkan hasil yang sama dengan baris code yang lebih sedikit.
+
+Sebelum ada _EchmaScript 6 (ES 2015)_ untuk mengekstraksi nilai dari sebuah _array_, kamu harus melakukan seperti ini:
+
+```js
+const fruits = ['apple', 'banana', 'orange'];
+
+const apple = fruits[0];
+const banana = fruits[1];
+const orange = fruits[2];
+
+console.log('i have a', apple, 'and a', banana, 'and an', orange);
+
+Output: i have a apple and a banana and an orange
+```
+
+Kode diatas tentu berjalan dengan baik, tapi kita menggunakan 3 baris kode untuk mendapakan 3 nilai,
+ini baru 3 _element_ bayangkan jika kita ingin memperolah 5 nilai atau lebih tentu baris kode yang digunakan akan banyak juga.
+
+Sekarang mari kita coba menggunakan fitur _Destructuring_.
+
+```js
+const fruits = ['apple', 'banana', 'orange'];
+
+// index 0, 1, 2
+const [apple, banana, orange] = fruits;
+
+console.log('i have a', apple, 'and a', banana, 'and an', orange);
+
+Output: i have a apple and a banana and an orange
+```
+
+Kita mendapatkan hasil yang sama dengan 1 baris kode diatas, kita tidak perlu menuliskan 3 baris kode lagi.
+
+Lalu kita juga dapat mengabaikan nilai yang tidak diinginkan. contohnya kita hanya ingin mendapatkan nilai _apple_ dan _orange_ saja.
+
+kita bisa mengabaikan _variable_ yang di definisikan untuk mengambil nilai _array_ nya seperti ini:
+
+```js
+const fruits = ['apple', 'banana', 'orange'];
+
+
+// index 0, 1, 2
+const [apple, , orange] = fruits;
+
+console.log('i have a', apple,  'and an', orange);
+
+Output: i have a apple and an orange
+```
+
+atau hanya ingin mendapatkan nilai _orange_ saja, maka lakukan seperti ini:
+
+```js
+const fruits = ['apple', 'banana', 'orange'];
+
+// index 0, 1, 2
+const [, , orange] = fruits;
+
+console.log('i have a', orange);
+
+Output: i have a orange
+```
+
+bagaimana kalo hanya ingin mendapatkan nilai _apple_ dan _banana_ saja ?
+
+karena nilai _apple_ dan _banana_ berada di _index_ _0_ dan _1_ atau berurutan maka kita bisa mengabaikan yang lainnya seperti ini:
+
+```js
+const fruits = ['apple', 'banana', 'orange'];
+
+// index 0, 1
+const [apple, banana] = fruits;
+
+console.log('i have a', apple,  'and an', banana);
+
+Output: i have a apple and an banana
+```
+
+## _Destructuring_ pada _Object_
+
+Kita semua tau bahwa ketika membuat sebuah _object_ kita menggunakan _curly braces `{...}`_ dan harus berisi properti.
+Sebuah properti harus memiliki _key_ dan _value_ dimana _key_ harus berupa _string_ atau _symbol_ dan _value_ dapat berisi tipe apa saja.
+Untuk mendapatkan nilai dari _object_ tentu berbeda dengan _array_. Sebelum ada _EchmaScript 6 (ES 2015)_ kamu harus melakukan seperti ini:
+
+```js
+const user = {
+  firstName: 'Jhon',
+  lastName: 'Doe',
+  age: 24,
+};
+
+const firstName = user.firstName;
+const lastName = user.lastName;
+const age = user.age;
+
+console.log(`Hello my name is ${firstName} ${lastName} and i'm ${age} years old.`);
+```
+
+Sekarang mari kita coba menggunakan fitur _Destructuring_.
+
+```js
+const user = {
+  firstName: 'Jhon',
+  lastName: 'Doe',
+  age: 24,
+};
+
+const { firstName, lastName, age } = user;
+
+console.log(`Hello my name is ${firstName} ${lastName} and i'm ${age} years old.`);
+
+Output: Hello my name is Jhon Doe and i'm 24 years old.
+```
+
+kalau di _array_ kita masukan nilainya di dalam sebuah _square braces_ dan juga nilai yang di dapat sesuai urutan _index_-nya.
+sedangkan _object_ kita panggil setiap _key_ yang berada didalam _object_ ke sebuah _curly braces_ di sisi kiri.
+
+berbeda dengan _array_ jika ingin mengambil nilai yang berada di _index_ ke 2 misalnya, kita harus mengkosongkan _variable_ untuk mendapatkan nilai sebelumnya seperti:
+
+```js
+const fruits = ['apple', 'banana', 'orange'];
+
+// index 0, 1, 2
+const [, , item_index_2] = fruits;
+
+console.log(`i have a ${item_index_2}`);
+
+Output: i have a apple and an orange
+```
+
+di _object_ yg kita masukan adalah _key_ dari _Object_ nya itu sendiri, misalnya kita ingin mengambil _key_ _age_-nya saja.
+
+```js
+const user = {
+  firstName: 'Jhon',
+  lastName: 'Doe',
+  age: 24,
+};
+
+const { age } = user;
+
+console.log(`Hello i'm ${age} years old.`);
+Output: Hello i'm 24 years old.
+```
+
+pastikan yang dimasukan kedalam _curly braces_ di sisi kiri sesuai dengan _key_ pada _object_ yang ingin di _Destructuring_
+
+## Kesimpulan
+
+Sekarang kamu sudah mengetahui bagaimana menggunakan _Destructuring_ pada _Array_ & _Object_.<br/>

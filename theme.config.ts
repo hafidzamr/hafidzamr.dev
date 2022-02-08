@@ -11,6 +11,66 @@ const styles: Styles = {
       fontFamily: "'Jost', sans-serif",
     },
 
+    h1: {
+      display: 'block',
+      fontSize: '2em',
+      fontWeight: 'bold',
+      margin: '0.67em 0',
+    },
+
+    h2: {
+      display: 'block',
+      fontSize: '1.5em',
+      fontWeight: 'bold',
+      margin: '0.83em 0',
+      scrollMarginTop: '5em',
+    },
+    h3: {
+      display: 'block',
+      fontSize: '1.17em',
+      fontWeight: 'bold',
+      margin: '1em 0',
+      scrollMarginTop: '5em',
+    },
+    h4: {
+      display: 'block',
+      fontWeight: 'bold',
+      margin: '1.33em 0',
+      scrollMarginTop: '5em',
+    },
+    h5: {
+      display: 'block',
+      fontSize: '.83em',
+      fontWeight: 'bold',
+      margin: '1.67em 0',
+    },
+    h6: {
+      display: 'block',
+      fontSize: '67em',
+      fontWeight: 'bold',
+      margin: '2.33em 0',
+    },
+    '.anchor': {
+      position: 'absolute',
+      marginLeft: '-0.8em',
+      visibility: 'hidden',
+      maxWidth: 'container.md',
+      width: '100%',
+    },
+    '.anchor:after': {
+      color: mode('gray.300', 'gray.500')(props),
+      content: '"#"',
+    },
+    '.anchor:hover': {
+      visibility: 'visible',
+      textDecorationLine: 'none !important',
+    },
+
+    '*:hover > .anchor ': {
+      visibility: 'visible',
+      textDecorationLine: 'none',
+    },
+
     '.token.prolog, .token.doctype, .token.cdata': {
       color: mode('gray.700', 'gray.300')(props),
     },

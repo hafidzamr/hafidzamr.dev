@@ -1,13 +1,14 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useMDXComponent } from 'next-contentlayer/hooks';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text, useColorModeValue } from '@chakra-ui/react';
 import { parseISO, format } from 'date-fns';
 
 import Layout from '@/Layouts';
 import MDXComponent from '@/components/Markdown/';
-import { allBlogs } from '@/.contentlayer/data';
-import { Blog as BlogTypes } from '@/.contentlayer/types';
+import { allBlogs } from '.contentlayer/data';
+import { Blog as BlogTypes } from '.contentlayer/types';
 
 interface BlogProps {
   blog: BlogTypes;
@@ -18,7 +19,7 @@ const Blog: React.FC<BlogProps> = ({ blog }) => {
   return (
     <Layout>
       <Box>
-        <Text as='h1' fontWeight='bold' fontSize={['xl', '5xl']}>
+        <Text as='h1' fontWeight='bold' color={useColorModeValue('gray.900', 'glow.20')} fontSize={['1.5em', '2em']}>
           {blog.title}
         </Text>
 

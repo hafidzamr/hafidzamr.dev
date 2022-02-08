@@ -27,7 +27,7 @@ export const BlogTypes = defineDocumentType(() => ({
   computedFields,
 }));
 
-export default makeSource({
+const contentLayerConfig = makeSource({
   contentDirPath: '_blog',
   documentTypes: [BlogTypes],
   mdx: {
@@ -47,3 +47,5 @@ export default makeSource({
     ],
   },
 });
+
+export default contentLayerConfig;
