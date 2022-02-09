@@ -9,12 +9,13 @@ import { pageview } from '@/lib/gtm';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
+
   React.useEffect(() => {
     router.events.on('routeChangeComplete', pageview);
     return () => {
       router.events.off('routeChangeComplete', pageview);
     };
-  }, [router.events]);
+  }, [router]);
 
   return (
     <>
