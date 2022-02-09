@@ -32,8 +32,8 @@ const Layout: React.FC<MetaType> = ({
       <meta property='twitter:description' content={description} />
       <meta property='twitter:image' content={image} />
     </Head>
-    <Navbar />
-    <Container maxWidth='container.md' marginTop={[50, 100]}>
+    <Container maxWidth='container.md'>
+      <Navbar />
       {children}
     </Container>
   </>

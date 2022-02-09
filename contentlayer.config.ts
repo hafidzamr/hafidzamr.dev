@@ -1,7 +1,6 @@
 import { defineDocumentType, makeSource, ComputedFields } from 'contentlayer/source-files';
 import readingTime from 'reading-time';
 import remarkGfm from 'remark-gfm';
-import { remarkMdxImages } from 'remark-mdx-images';
 import rehypeSlug from 'rehype-slug';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -33,14 +32,7 @@ const contentLayerConfig = makeSource({
   contentDirPath: '_blog',
   documentTypes: [BlogTypes],
   mdx: {
-    remarkPlugins: [remarkGfm, remarkMdxImages],
-    esbuildOptions: (options) => {
-      options.loader = {
-        ...options.loader,
-        '.svg': 'dataurl',
-      };
-      return options;
-    },
+    remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,
       rehypeCodeTitles,

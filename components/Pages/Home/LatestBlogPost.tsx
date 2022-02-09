@@ -42,7 +42,7 @@ const LatestBlogPost = (): JSX.Element => {
               </Text>
             </Link>
           </NextLink>
-          <Text as='p' color={dateColor} fontSize='sm' marginTop='1'>
+          <Text as='p' color={dateColor} fontSize='sm' marginTop={1}>
             {format(parseISO(blog.createdAt), 'MMMM dd, yyyy')}
           </Text>
         </Box>

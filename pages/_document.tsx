@@ -20,6 +20,15 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          <noscript>
+            <iframe
+              title='GTM'
+              src='https://www.googletagmanager.com/ns.html?id=GTM-P4S3P93'
+              height='0'
+              width='0'
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
           <Main />
           <NextScript />
         </body>

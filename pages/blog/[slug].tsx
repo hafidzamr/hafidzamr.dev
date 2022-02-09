@@ -18,7 +18,7 @@ const Blog: React.FC<BlogProps> = ({ blog }) => {
   const MDX = useMDXComponent(blog.body.code);
   return (
     <Layout title={blog.title} description={blog.summary} image={blog.icon}>
-      <Box>
+      <Box marginY={20}>
         <Text as='h1' fontWeight='bold' color={useColorModeValue('gray.900', 'glow.20')} fontSize={['1.5em', '2em']}>
           {blog.title}
         </Text>
@@ -33,7 +33,7 @@ const Blog: React.FC<BlogProps> = ({ blog }) => {
           </Text>
         </Box>
       </Box>
-      <Box marginY={['10', '16']}>
+      <Box marginY={[10, 16]}>
         {MDX ? (
           <MDX components={MDXComponent} />
         ) : (
