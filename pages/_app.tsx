@@ -15,7 +15,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     return () => {
       router.events.off('routeChangeComplete', pageview);
     };
-  }, [router]);
+  }, [router.events]);
 
   return (
     <>
