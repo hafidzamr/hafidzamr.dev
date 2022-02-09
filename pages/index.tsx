@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { Box, Link, UnorderedList, ListItem } from '@chakra-ui/react';
 import Layout from '@/Layouts';
 import { Text } from '@/components/UI';
+import LatestBlogPost from '@/components/Pages/Home/LatestBlogPost';
 
 const Home: NextPage = () => (
   <Layout>
@@ -90,6 +91,10 @@ const Home: NextPage = () => (
     </Box>
 
     <Box marginTop={50}>
+      <LatestBlogPost />
+    </Box>
+
+    <Box marginTop={50}>
       <Text marginBottom={3}>👣 Next Steps</Text>
       <Text marginBottom={3} as='em' fontSize={15}>
         Since you don't want to leave my profile just yet! Here are some things you can do connect with me:
@@ -116,7 +121,7 @@ const Home: NextPage = () => (
       >
         Linkedin
       </Link>
-      {', '}
+      {' or '}
       <Link
         href='https://github.com/hafidzamr'
         fontSize={15}
@@ -126,18 +131,6 @@ const Home: NextPage = () => (
         rel='noopener noreferrer'
       >
         Github
-      </Link>
-      {' or '}
-      <Link
-        href='https://drive.google.com/drive/folders/1AO9uKJxLXjvu3TpuiT5-dh5qinGEMbVg?usp=sharing'
-        fontSize={15}
-        textDecoration='underline'
-        _dark={{ color: 'glow.10' }}
-        _light={{ color: 'green.500' }}
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        Resume
       </Link>
     </Box>
   </Layout>

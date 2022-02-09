@@ -2,20 +2,25 @@
 
 import NextLink from 'next/link';
 import { Box, Text, Link, useColorModeValue } from '@chakra-ui/react';
-import Layout from '@/Layouts';
+import { parseISO, format } from 'date-fns';
 import { allBlogs } from '.contentlayer/data';
 import { Blog as BlogProps } from '.contentlayer/types';
+import Layout from '@/Layouts';
 
 const Article = (): JSX.Element => {
   const textColor = useColorModeValue('gray.900', 'glow.20');
+  const dateColor = useColorModeValue('gray.900', 'gray.500');
 
   return (
     <Layout>
       {allBlogs.map((blog: BlogProps) => (
-        <Box key={blog._id} cursor='pointer' marginY={20}>
+        <Box key={blog._id} marginY={20}>
+          <Text as='p' color={dateColor}>
+            {format(parseISO(blog.createdAt), 'MMMM dd, yyyy')}
+          </Text>
           <NextLink href={`/blog/${blog.slug}`}>
-            <Link _hover={{ textDecoration: 'none' }}>
-              <Text as='h3' fontWeight='bold' marginBottom={1} color={textColor} fontSize='1.5em'>
+            <Link _hover={{ textDecoration: 'none' }} cursor='pointer'>
+              <Text as='h3' fontWeight='bold' marginBottom={1} marginTop={5} color={textColor} fontSize='1.5em'>
                 {blog.title}
               </Text>
 
