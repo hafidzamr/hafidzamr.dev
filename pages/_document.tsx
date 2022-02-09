@@ -12,17 +12,8 @@ class MyDocument extends Document {
       <Html lang='id'>
         <Head>
           <meta charSet='UTF-8' />
+          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
-          <meta name='title' content='@hafidzamr' />
-          <meta name='description' content='About Hafidz Amrulloh' />
-          <meta property='og:type' content='website' />
-          <meta property='og:url' content='https://hafidzamr.tech/' />
-          <meta property='og:title' content='Hafidz Amrulloh' />
-          <meta property='og:description' content='About Hafidz Amrulloh' />
-          <meta property='twitter:card' content='summary_large_image' />
-          <meta property='twitter:url' content='https://hafidzamr.tech/' />
-          <meta property='twitter:title' content='About Hafidz Amrulloh' />
-          <meta property='twitter:description' content='About Hafidz Amrulloh' />
           <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
           <link
             href='https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'

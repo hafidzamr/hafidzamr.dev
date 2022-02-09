@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import NextLink from 'next/link';
+import NextImage from 'next/image';
 import React from 'react';
 import { Box, Flex, Text, Link, useColorModeValue } from '@chakra-ui/react';
 import { ArrowRightIcon } from '@chakra-ui/icons';
@@ -33,7 +34,7 @@ const LatestBlogPost = (): JSX.Element => {
           <NextLink href={`/blog/${blog.slug}`}>
             <Link _hover={{ textDecoration: 'none' }} cursor='pointer'>
               <Text as='h4' marginBottom={1} marginTop={5}>
-                {blog.title}
+                {blog.icon && <NextImage src={blog.icon} width={15} height={15} />} {blog.title}
               </Text>
 
               <Text as='p' fontSize='sm' textOverflow='ellipsis' overflow='hidden' whiteSpace='nowrap'>
