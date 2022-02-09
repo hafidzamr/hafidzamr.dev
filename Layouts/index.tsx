@@ -13,6 +13,7 @@ const Layout: React.FC<MetaType> = ({
 }) => (
   <>
     <Head>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <title>{title}</title>
       <meta name='title' content='@hafidzamr' />
       <meta name='description' content={description} />
@@ -32,7 +33,7 @@ const Layout: React.FC<MetaType> = ({
       <meta property='twitter:image' content={image} />
     </Head>
     <Navbar />
-    <Container maxWidth='container.md' marginTop={[50, 150]}>
+    <Container maxWidth='container.md' marginTop={[50, 100]}>
       {children}
     </Container>
   </>
