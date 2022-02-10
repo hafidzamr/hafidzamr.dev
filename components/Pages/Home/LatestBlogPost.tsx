@@ -31,10 +31,10 @@ const LatestBlogPost = (): JSX.Element => {
 
       {allBlogs.slice(0, 3).map((blog: BlogProps) => (
         <Box key={blog._id} marginY={5}>
-          <NextLink href={`/blog/${blog.slug}`}>
+          <NextLink href={`/blog/${blog.slug}`} passHref>
             <Link _hover={{ textDecoration: 'none' }} cursor='pointer'>
               <Text as='h4' marginBottom={1} marginTop={5}>
-                {blog.icon && <NextImage src={blog.icon} width={15} height={15} />} {blog.title}
+                {blog.icon && <NextImage src={blog.icon} width={15} height={15} alt='img-icon' />} {blog.title}
               </Text>
 
               <Text as='p' fontSize='sm' textOverflow='ellipsis' overflow='hidden' whiteSpace='nowrap'>
