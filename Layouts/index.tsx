@@ -9,7 +9,7 @@ const Layout: React.FC<MetaType> = ({
   title = '@hafidzamr_',
   description = 'About Hafidz Amrulloh',
   url = 'https://hafidzamr.dev/',
-  image,
+  image = 'https://res.cloudinary.com/du4c8fvmo/image/upload/v1644498817/profile_ri1oqf.jpg',
 }) => (
   <>
     <Head>
