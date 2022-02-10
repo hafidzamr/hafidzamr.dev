@@ -39,3 +39,11 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+
+
+#env
+.env
+
+/public/robots.txt
+/public/sitemap-0.xml
+/public/sitemap.xml
