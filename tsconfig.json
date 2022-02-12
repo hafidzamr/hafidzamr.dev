@@ -16,9 +16,19 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.setup.js", "__mocks__/styleMock.js", "__mocks__/fileMock.js", "jest.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.setup.js",
+    "__mocks__/styleMock.js",
+    "__mocks__/fileMock.js",
+    "jest.config.js",
+    ".contentlayer/generated"
+  ],
   "exclude": ["node_modules"]
 }

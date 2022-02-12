@@ -3,8 +3,8 @@
 import NextLink from 'next/link';
 import { Box, Text, Link, useColorModeValue } from '@chakra-ui/react';
 import { parseISO, format } from 'date-fns';
-import { allBlogs } from '.contentlayer/data';
-import { Blog as BlogProps } from '.contentlayer/types';
+import { allBlogs, Blog as BlogProps } from 'contentlayer/generated';
+
 import Layout from '@/Layouts';
 
 const Article = (): JSX.Element => {

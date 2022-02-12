@@ -6,8 +6,7 @@ import { Box, Flex, Text, Link, useColorModeValue } from '@chakra-ui/react';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 import { parseISO, format } from 'date-fns';
 
-import { allBlogs } from '.contentlayer/data';
-import { Blog as BlogProps } from '.contentlayer/types';
+import { allBlogs, Blog as BlogProps } from 'contentlayer/generated';
 
 const LatestBlogPost = (): JSX.Element => {
   const dateColor = useColorModeValue('gray.900', 'gray.500');

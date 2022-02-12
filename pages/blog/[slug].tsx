@@ -7,8 +7,7 @@ import { parseISO, format } from 'date-fns';
 
 import Layout from '@/Layouts';
 import MDXComponent from '@/components/Markdown/';
-import { allBlogs } from '.contentlayer/data';
-import { Blog as BlogTypes } from '.contentlayer/types';
+import { allBlogs, Blog as BlogTypes } from 'contentlayer/generated';
 
 interface BlogProps {
   blog: BlogTypes;
