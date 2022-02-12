@@ -12,7 +12,7 @@ const Article = (): JSX.Element => {
   const dateColor = useColorModeValue('gray.900', 'gray.500');
 
   return (
-    <Layout title='@hafidzamr - Blog' description='Kumpulan Blog Hafidz Amrulloh'>
+    <Layout title='@hafidzamr - Blog' description='Kumpulan Blog Hafidz Amrulloh' keywords={['hafidzamr blog', 'hafidzdev blog']}>
       {allBlogs.map((blog: BlogProps) => (
         <Box key={blog._id} marginY={20}>
           <Text as='p' color={dateColor}>

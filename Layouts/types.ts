@@ -3,4 +3,5 @@ export interface MetaType {
   description?: string;
   image?: string;
   url?: string;
+  keywords?: string[];
 }
