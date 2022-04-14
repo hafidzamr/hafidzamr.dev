@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface MetaType {
   title?: string;
   description?: string;

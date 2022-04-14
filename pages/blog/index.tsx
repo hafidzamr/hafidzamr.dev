@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 import NextLink from 'next/link';
 import { Box, Text, Link, useColorModeValue } from '@chakra-ui/react';
 import { parseISO, format } from 'date-fns';

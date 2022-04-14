@@ -1,8 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Flex, Stack, useColorMode, Link } from '@chakra-ui/react';
+import { Flex, Stack, useColorMode, Link, IconButton } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { Button } from '@/components/UI';
 
 const Navbar: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -17,9 +16,11 @@ const Navbar: React.FC = () => {
           <NextLink href='/blog' passHref>
             <Link cursor='default'>Blog</Link>
           </NextLink>
-          <Button name='btnMode' aria-label='Change Mode' cursor='default' onClick={toggleColorMode}>
-            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-          </Button>
+          <IconButton
+            aria-label='Toggle light dark mode'
+            onClick={toggleColorMode}
+            icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+          />
         </Stack>
       </Flex>
     </Flex>
