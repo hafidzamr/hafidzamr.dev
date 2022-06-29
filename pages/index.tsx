@@ -144,7 +144,7 @@ const Home: NextPage = (): JSX.Element => {
             Since you don't want to leave my profile just yet! Here are some things you can do connect with me:
           </Text>{' '}
           <Link
-            href='https://www.instagram.com/hafidzamr_/'
+            href='https://www.instagram.com/xhttp.req/'
             fontSize={15}
             textDecoration='underline'
             color='pink.400'
