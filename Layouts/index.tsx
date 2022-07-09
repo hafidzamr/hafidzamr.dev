@@ -2,9 +2,8 @@ import React, { PropsWithChildren } from 'react';
 import Head from 'next/head';
 import { Container } from '@chakra-ui/react';
 import Navbar from './Navbar';
-import { MetaType } from './types';
 
-const Layout: React.FC<PropsWithChildren<MetaType>> = ({
+const Layout: React.FC<PropsWithChildren<Layout.MetaType>> = ({
   children,
   title = '@hafidzamr_',
   description = 'About Hafidz Amrulloh',
